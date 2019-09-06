@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :todos, :only => [:create]
 
+  get 'github_component', to: 'demo#index'
+
   root 'dash#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
