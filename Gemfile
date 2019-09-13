@@ -1,12 +1,7 @@
 source 'https://gems.ruby-china.com'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# gem 'rails', '4.2.10'
 gem 'rails', '~> 5.1.6'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.3.6'
 gem 'mysql2', '0.5.2'
-
 gem "puma", "~> 3.11"
 
 # Use SCSS for stylesheets
@@ -27,6 +22,9 @@ gem 'jbuilder', '~> 2.9.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bootstrap-sass'
+gem 'sprockets', '~> 3.7.2'
+
 # cell view component 测试 gem
 gem 'cells-rails'
 gem 'cells-erb'
@@ -43,6 +41,9 @@ gem "benchmark-ips"
 
 # github 新出的，被合并到了 Rails 6.1 中
 gem "actionview-component"
+
+# using gon share variables to frot-end
+gem 'gon'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -63,14 +64,13 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
   gem 'guard'
 
   gem 'guard-livereload', '~> 2.5', require: false
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'annotate', '~> 2.7.2'
 end
 

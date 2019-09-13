@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: pull_requests
+#
+#  id         :integer          not null, primary key
+#  merged_at  :datetime
+#  draft      :boolean          default(FALSE), not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class PullRequest < ApplicationRecord
   has_one :issue, inverse_of: :pull_request
 

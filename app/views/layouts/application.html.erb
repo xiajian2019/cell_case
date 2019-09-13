@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand">
+      <%= link_to "UI组件试验田", '/'%>
+    </div>
 
-<%= yield %>
+    <div class='nav-collapse'>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><%= link_to 'Cell Todo Example', dash_index_path %></li>
+        <li><%= link_to "活动页面系统", pages_path %></li>
+        <li><%= link_to "Actionview Component", demo_index_path %></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+<div class="container" style="margin-top: 70px">
+  <%= yield %>
+</div>
+
+<%= include_gon %>
+<%= yield :page_javascript %>
 </body>
 </html>
