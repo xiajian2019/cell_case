@@ -29,6 +29,11 @@ gem 'sprockets', '~> 3.7.2'
 gem 'cells-rails'
 gem 'cells-erb'
 
+gem 'slim-rails'
+
+# 快速搭建后台
+gem "godmin"
+
 ### github component 测试的 gem
 
 # https://github.com/primer/octicons
@@ -70,7 +75,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
   gem 'annotate', '~> 2.7.2'
 end
 

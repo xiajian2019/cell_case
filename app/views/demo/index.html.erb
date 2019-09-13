@@ -5,3 +5,20 @@
     <%= render(Issues::Badge, state: issue.state.to_sym) %>
   <% end %>
 <% end %>
+
+<h2>Box的测试: content 好像是必选字段</h2>
+
+
+<%= render(Box, content: 'box测试一下') %>
+
+<%= render(Box, content: 'box测试一下') do %>
+  这是我的一个简单的测试 box
+<% end %>
+
+<h2>SlimTemplate</h2>
+
+<%= render(SlimTemplate, message: 'slim template 测试一下') do %>
+  content 是必填的内容 <br>
+
+<% end %>
+
