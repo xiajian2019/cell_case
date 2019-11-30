@@ -34,6 +34,12 @@ gem 'slim-rails'
 # 快速搭建后台
 gem "godmin"
 
+# JSON editor 和 JSON schema - https://github.com/ruby-json-schema/json-schema
+gem 'json-schema'
+
+# https://github.com/mirego/activerecord_json_validator
+gem 'activerecord_json_validator'
+
 ### github component 测试的 gem
 
 # https://github.com/primer/octicons

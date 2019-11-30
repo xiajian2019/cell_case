@@ -16,6 +16,6 @@
 #
 
 class Component < ApplicationRecord
-  store :config, in: [:props, :properties], coder: JSON
+  store :config, accessors: [:properties, :props], coder: JSON
 
 end

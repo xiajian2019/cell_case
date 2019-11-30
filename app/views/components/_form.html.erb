@@ -1,0 +1,59 @@
+<%= form_for @resource do |f| %>
+  <%= f.hidden_field :properties %>
+  <%= f.hidden_field :props %>
+
+  <%= f.input :name %>
+  <%= f.input :code %>
+  <%= f.text_area :description %>
+
+  <div class="form-group">
+    <div id='editor_properties'></div>
+  </div>
+
+  <div class="form-group">
+    <div id='editor_props'></div>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<% page_javascript do %>
+  <!--集成 ACE 有点莫名其妙-->
+  <script type="text/javascript" charset="utf-8">
+      $(function () {
+          var editor = new JSONEditor(document.getElementById('editor_properties'), {
+              schema: {
+                  "title": "组件属性编辑器",
+                  "type": "object",
+                  "required": [
+                      "properties"
+                  ],
+                  "properties": {
+                      "properties": {
+                          "type": "string",
+                          "format": "json",
+                          "options": {
+                              "ace": {
+                                  "theme": "ace/theme/vibrant_ink",
+                                  "tabSize": 2,
+                                  "useSoftTabs": true,
+                                  "wrap": true
+                              }
+                          }
+                      }
+                  }
+              },
+              startval: gon.config.props,
+              disable_properties: true,
+              disable_edit_json: true,
+              iconlib: 'bootstrap3',
+              theme: 'bootstrap3'
+          });
+
+          editor.on('change', function (e) {
+              var content = editor.getValue();
+              console.log(content)
+          })
+      })
+  </script>
+<% end %>
