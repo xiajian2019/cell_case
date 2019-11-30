@@ -61,3 +61,6 @@ title: {default: "", type: "string", title: "页面标题"}
 __proto__: Object
 ```
 
+## json-editor
+
+这里有两种类型的 json editor，一种是用来编辑组件的 json editor，另一种是根据 schema 实例化的一种

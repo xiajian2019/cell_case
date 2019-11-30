@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'sprockets', '~> 3.7.2'
 
+gem 'webpacker', '~> 4.2.0'
+
 # cell view component 测试 gem
 gem 'cells-rails'
 gem 'cells-erb'
